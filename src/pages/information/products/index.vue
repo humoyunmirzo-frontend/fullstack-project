@@ -61,7 +61,7 @@ function backPreviousRoute() {
     </div>
     <div class="grid grid-cols-4 items-start gap-10">
       <div class="col-span-1 flex flex-col overflow-hidden border rounded-8px">
-        <div v-for="category in productsStore.categories" :key="category" :class="selectedCategory === category && 'bg-primary text-white'" class="w-full flex flex-col cursor-pointer border-b-1 px-2 py-1 text-4.5 font-500 hover:bg-primary hover:text-white" @click=" selectedCategory = category; categoryChange();">
+        <div v-for="category in productsStore.categories" :key="category" :class="selectedCategory === category ? 'bg-primary text-white' : ''" class="w-full flex flex-col cursor-pointer border-b-1 px-2 py-1 text-4.5 font-500 hover:bg-primary hover:text-white" @click=" selectedCategory = category; categoryChange();">
           {{ category.charAt(0).toUpperCase() + category.slice(1) }}
         </div>
       </div>

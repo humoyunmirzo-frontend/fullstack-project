@@ -21,7 +21,7 @@ function backPreviousRoute() {
     </div>
     <div class="grid grid-cols-1 h-full w-full items-start justify-between gap-25 border rounded-8px px-4 py-2 md:grid-cols-2">
       <div class="overflow-hidden duration-300">
-        <img :src="productsStore.product.images && productsStore.product.images[0]" class="h-500px w-400px cursor-zoom-in object-cover duration-300 hover:scale-[1.1]" alt="">
+        <img :src="productsStore.product.images ? productsStore.product.images[0] : ''" class="h-500px w-400px cursor-zoom-in object-cover duration-300 hover:scale-[1.1]" alt="">
       </div>
       <div class="h-full flex flex-col items-end justify-between gap-1">
         <div class="flex flex-col items-start self-start gap-1">

@@ -23,7 +23,7 @@ const props = withDefaults(defineProps<IProp>(), {
 <template>
   <button
     class="flex items-center justify-center gap-1 text-center"
-    :class="`color-${props.color} size-${props.size} ${props.disabled && 'disabledClass'} ${props.loading && 'loadingClass'}`"
+    :class="`color-${props.color} size-${props.size} ${props.disabled ? 'disabledClass' : ''} ${props.loading ? 'loadingClass' : ''}`"
     :disabled="props.disabled"
   >
     <Icon v-if="props.prependIcon" :icon="props.prependIcon" />
