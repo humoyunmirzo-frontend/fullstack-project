@@ -7,12 +7,17 @@ body,
   margin: 0;
   padding: 0;
 }
-
+*::selection {
+  background-color: #44b389;
+  color: white;
+}
 html.dark {
   background: #121212;
   color-scheme: dark;
 }
-
+.vue-devtools-panel {
+  display: none !important;
+}
 #nprogress {
   pointer-events: none;
 }

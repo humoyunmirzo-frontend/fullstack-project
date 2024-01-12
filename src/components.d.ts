@@ -7,11 +7,24 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    Footer: typeof import('./components/Footer.vue')['default']
+    HButton: typeof import('./components/HButton.vue')['default']
+    HCard: typeof import('./components/HCard.vue')['default']
+    HCheckbox: typeof import('./components/HCheckbox.vue')['default']
+    Header: typeof import('./components/Header.vue')['default']
+    HIconButton: typeof import('./components/HIconButton.vue')['default']
+    HInput: typeof import('./components/HInput.vue')['default']
+    HModal: typeof import('./components/HModal.vue')['default']
+    HPagination: typeof import('./components/HPagination.vue')['default']
+    HRadioTemplate: typeof import('./components/HRadioTemplate.vue')['default']
+    HTable: typeof import('./components/HTable.vue')['default']
+    Overlay: typeof import('./components/Overlay.vue')['default']
+    Posts: typeof import('./components/Posts.vue')['default']
+    Products: typeof import('./components/Products.vue')['default']
     README: typeof import('./components/README.md')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    TheCounter: typeof import('./components/TheCounter.vue')['default']
-    TheFooter: typeof import('./components/TheFooter.vue')['default']
-    TheInput: typeof import('./components/TheInput.vue')['default']
+    Todos: typeof import('./components/Todos.vue')['default']
+    Users: typeof import('./components/Users.vue')['default']
   }
 }
