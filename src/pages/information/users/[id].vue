@@ -14,6 +14,12 @@ onMounted(async () => {
 function backPreviousRoute() {
   router.back()
 }
+function showPost(id: number) {
+  router.push(`/information/posts/${id}`)
+}
+function showTodo(id: number) {
+  router.push(`/information/todos/${id}`)
+}
 </script>
 
 <template>
@@ -126,6 +132,7 @@ function backPreviousRoute() {
           :key="post.id"
           class="w-full cursor-pointer"
           :data="post"
+          @click="showPost(post.id)"
         >
           <div class="text-5 font-600">
             {{ post.title }}
@@ -144,7 +151,12 @@ function backPreviousRoute() {
       <div
         class="grid grid-cols-1 mb-12 items-stretch gap-6 md:grid-cols-4 sm:grid-cols-2"
       >
-        <h-card v-for="todo in usersStore.userTodos" :key="todo.id" class="w-full cursor-pointer" :data="todo">
+        <h-card
+          v-for="todo in usersStore.userTodos" :key="todo.id"
+          class="w-full cursor-pointer"
+
+          :data="todo" @click="showTodo(todo.id)"
+        >
           <div class="text-5 font-600">
             {{ todo.todo }}
           </div>
